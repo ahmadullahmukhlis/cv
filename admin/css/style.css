@@ -1,0 +1,36 @@
+.bg-light{
+    background:rgb(92, 37, 145) !important;
+    color: white !important;
+}
+.navbar-light{
+    color: white !important;
+}
+.bg-light .nav-item a:hover{
+    background:rgb(67, 31, 100) !important ;
+    color: white !important;
+}
+.bg-light .nav-item a :active{
+    background:rgb(67, 31, 100) !important ;
+    color: white !important;
+}
+ .active{
+    background:rgb(67, 31, 100) !important ;
+    color: white !important;
+}
+.table-responsive{
+    padding: 30px;
+}
+thead{
+    text-align: center;
+    background-color: rgb(133, 42, 218,0.4);
+}
+tbody{
+    text-align: center;
+}
+tbody > tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.753);;
+  }
+
+  tbody > tr:nth-of-type(even) {
+    background-color:  rgb(255, 255, 255);;
+  }
