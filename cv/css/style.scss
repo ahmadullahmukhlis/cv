@@ -1,0 +1,1279 @@
+$bg-color:rgb(50, 3, 95);
+$font-size:8px;
+@mixin hr() {
+    margin: 2px 10% 15px 0%;
+}
+@mixin media($width){
+  @media screen and (max-width:$width) {
+    @content;
+  }
+}
+@include media(1300){
+  .container-fluid{
+    background-color: gray;
+  }
+}  /* FOND GRIS */
+ 
+  body {
+    background-color: rgb(216, 216, 216);
+    line-height: 1.5;
+    margin: 10px auto;
+    max-width: 1024px;
+    text-transform: capitalize;
+  }
+  
+  main {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0.5in;
+  width: 8.5in;
+  height: 11in;
+  background-color: white;
+  box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
+  font-family: 'Times New Roman', Times, serif;
+  color: hsl(0, 0%, 20%);
+}
+  /* FEUILLE A4 */
+  
+ 
+#classic-cv{
+    background-color: darken(white, 2);
+    text-transform: capitalize;
+   // border: 2px black solid;
+    font-size: auto;
+#p-info{
+    background-color: $bg-color;
+    color: white;
+    #cv-img{
+        padding:2% 20%;
+        img{
+            margin: 30px;
+            border-radius: 50%;
+        }
+    }
+    #profile{
+        margin-left: 10% !important;
+        margin-bottom: 23px;
+        h6{
+            font-size: 14px;
+            font-weight: bold;
+        }
+        hr{
+           @include hr(); 
+        }
+        p{
+        font-size: 10px;
+        margin-bottom: 3px;
+        padding-right: 35px;
+        }
+        .px-2{
+            padding-left: 0px !important;
+            padding-right: 4px !important;
+        }
+    }
+    
+    #contact{
+     @extend #profile;
+    }
+    #intrest{
+        @extend #profile;
+        ol{
+            padding-left: 9px;
+            
+            margin-left: 0px;
+            
+            li{
+                font-size: 12px;
+                padding-left: 0px;
+                margin-left: 0px;
+            }
+        }
+       }
+}
+#main{
+    padding: 0px;
+    #name{
+       padding: 3px 0px;
+       background: linear-gradient(to top right, lighten($bg-color, 4) 34%, lighten($bg-color, 25) , darken($bg-color, $amount: 5) , lighten($bg-color, 34) , lighten($bg-color, 34) , darken($bg-color, $amount: 23) );
+      background: linear-gradient(to top right, lighten($bg-color, 0) , lighten($bg-color, 25) , darken($bg-color, $amount: 10) ,lighten($bg-color, 30) );
+      //  background: lighten($bg-color, $amount: 20);
+        color:white;
+        margin:57px 0px;
+       text-align: center;
+       h2{
+           font-size: 24px;
+       }
+       p{
+           font-size: 12px;
+       }
+       h2,p{
+           margin-bottom: 0px;
+       }
+    }
+    #experience{
+        margin-left: 5% !important;
+        margin-bottom: 23px;
+        h6{
+            margin-bottom: 8px;
+            padding-right: 35px;
+            font-size: 14px;
+            font-weight: bold;
+            }  
+        hr{
+            margin: 2px 5% 15px 0%; 
+         }
+             #p-experience{
+                 #start-date{  
+                     
+                      p,h6,small{
+                            margin-bottom: 0px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        padding:0px;
+                        }
+                        small{
+                            margin-bottom: 0px;
+                        font-size: 11px;
+                        font-weight: bold;
+                        }
+                    
+                 }
+                 #comp-desc{
+                     padding-right: 0px;
+                     p{
+                        
+                        margin: 0px 10% 0px 0%;
+                        font-size: 10px;
+                          margin-bottom: 4px;
+                     }
+                 }
+             }
+          
+       }
+       #e-s-i{
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+        margin-bottom: 23px;
+        #education{
+            padding-left: 0px !important;
+
+        }
+        h5{
+            font-size: 16px;
+            margin-bottom: 0px;
+            font-weight: bold;
+        }
+        h6{
+            font-size: 13px;
+            margin-bottom: 0px;
+            padding-right: 35px;
+            font-weight: bold;
+            } 
+            small{
+                font-size: 10px;
+                margin-bottom: 0px; 
+                font-weight: bold;
+            }
+        hr{
+            padding: 2px 0px;
+            margin: 2px 0px;
+        }
+        .edu-desc{
+            margin-bottom: 12px;
+        }
+       }
+       #skile{
+        #skile-desc{
+            margin: 2px 0px;
+            padding: 0px;
+            #skile-head{
+                padding-left: 0px;
+                h5{
+                    font-size: 16px;
+                    margin-left: 0px;
+                }
+            }
+          .progress{
+              margin: 2px 0px;
+              padding: 0px 0px;
+              .progress-bar{
+                background-color: $bg-color;
+                
+            }
+          }
+        }
+       }
+       #expertise{
+        #exp-desc{
+            margin: 2px 0px;
+            #exp-head{
+                padding-left: 0px;
+                h5{
+                    font-size: 16px;
+                }
+            }
+          .progress{
+              margin: 2px 0px;
+              padding: 0px 0px;
+              .progress-bar{
+                background-color: $bg-color;
+                
+            }
+          }
+        }
+    }
+}
+
+}
+
+//creative cv scss or css
+#main-bg-color{
+    background: linear-gradient(to top right ,rgba(255, 166, 0, 0.733),30,rgb(226, 209, 209),70 );
+}
+#creative-cv{
+    .hr{
+        width: 25%;
+        height: 4px;
+        margin: 12px auto;
+        background: linear-gradient(to top right, lighten($bg-color, 0) , lighten($bg-color, 25) , darken($bg-color, $amount: 10) ,lighten($bg-color, 30) );
+    }
+    h1{
+        font-size: 26px;
+        margin-bottom: 0px;
+        font-weight: bold;
+      }
+      h6{
+        font-size: 16px;
+        margin-bottom: 0px;
+        font-weight: bold;
+       
+      }
+      p{
+        font-size: 14px;
+        margin-bottom: 0px;
+      }
+#personal-info{
+    text-align: center;
+ background: linear-gradient(to top right, rgb(255, 21, 130), blue,green);
+
+ #cv-img{
+     img{
+         margin: 12px auto;
+        width: 25% !important;
+        border-radius: 50%;
+     }
+ }
+ .name{
+     color: white;
+ }
+}
+#about-me{
+    text-align: center;
+    padding:  12px 16%;
+    h6{
+        margin-bottom: 12px;
+        color: orange;
+    }
+}
+#contect{
+    h6{
+        margin-bottom: 12px;
+        color: orange;
+    }
+    text-align: center;
+    padding:  12px 20%;
+}
+#skile-edu-intr{
+    #vl{
+        width: 1px !important;
+        background: linear-gradient(to top right, rgb(255, 21, 130), rgb(39, 39, 204),green);
+        margin: 0px 0px;
+    }
+    #edu-exp{
+        padding-left: 20%;
+        h5{
+            text-align: center;
+            margin-bottom: 9px;
+            color: orange;
+        }
+        h6{
+            font-size: 18;
+        }
+        #edu-head{
+            margin-bottom: 12px;
+           
+        }
+    }
+    #skile{
+        padding-right: 20%;
+        margin: 12px;
+        h5{
+            text-align: center;
+            margin-bottom: 9px;
+            color: orange;
+        }
+        #skile-desc{
+            margin: 2px 0px;
+            padding: 0px;
+            #skile-head{
+                padding-left: 0px;
+               
+            }
+          .progress{
+              margin: 2px 0px;
+              padding: 0px 0px;
+              .progress-bar{
+                background: linear-gradient(to top right, rgb(255, 21, 130), blue,green);
+                
+            }
+          }
+        }
+       }
+       #intrest{
+        margin-top: 12px;
+        h5{
+            text-align: center;
+            margin-bottom: 9px;
+            color: orange;
+        }
+        ul{
+            list-style: none;
+            padding-left: 20%;
+            li{
+                font-size: 19px;
+            }
+        }
+    }
+}
+
+}
+
+//profetional cv dessigned
+
+#profetional-cv{
+    $c-bg-color:lighten(gray,45);
+    h5{
+        background:rgb(248, 161, 127);
+        color: white;
+        text-align: center;
+    }
+#name-img{
+    background:rgb(248, 161, 127);
+    color: white;
+    #img{
+        img{
+            border-radius: 50%;
+        }
+    }
+    #name{
+        vertical-align: middle;
+        text-align: center;
+        margin: 55px auto;
+        hr{
+           border: 3px solid whitesmoke;
+           margin: 7px auto;
+        }
+    }
+}
+#cv-body{
+    #left-side{
+        padding: 0px;
+        #contect{
+            margin: 12px 0px;
+            padding: 12px;
+            background: $c-bg-color;
+            p{
+                margin-bottom: 2px;
+            }
+        }
+        #profile{
+            margin: 12px 0px;
+            padding: 12px;
+            background:  $c-bg-color;
+        }
+         #skile{
+            margin: 12px 0px;
+            padding: 12px;
+            background: $c-bg-color;
+            h6{
+                font-weight: bold;
+            } 
+            small{
+                font-weight: bold;
+                padding: auto 3px;
+            } 
+         }
+         #intrest{
+            margin: 12px 0px;
+            padding: 12px;
+            background: $c-bg-color; 
+            ul{
+                list-style: none;
+            }
+            }
+    }
+    #right-side{
+        padding: 0px;
+        margin-top: 12px;
+        padding-left: 12px;
+        #education{
+            padding: 12px;
+            background: $c-bg-color;
+           margin-bottom: 12px;
+           .edu-desc{
+               margin: 12px 9px;
+            h6{
+                margin-bottom: 2px;
+                font-weight: bold;
+            }
+           }
+        }
+        #experience{
+                padding: 12px;
+                background: $c-bg-color;
+                margin-bottom: 12px;
+               #exp-desc{
+                   margin: 12px 9px;
+                h6{
+                    margin-bottom: 2px;
+                    font-weight: bold;
+                }
+                p{
+                    margin-bottom: 2px;
+                    font-size: 12px;
+                }
+        }
+    }
+    #activity{
+        padding: 12px;
+        background: $c-bg-color;
+        margin-bottom: 12px;
+       #act-desc{
+           margin: 12px 9px;
+        h6{
+            margin-bottom: 2px;
+            font-weight: bold;
+        }
+        p{
+            margin-bottom: 2px;
+            font-size: 12px;
+        }
+}
+}
+    }
+
+}    
+}
+
+//creative 2 cv dessigned
+#creative2-cv{
+    h5{
+        text-align: center;
+        margin-bottom: 9px;
+        background-color: goldenrod;
+    }
+    #name{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 45%;
+        background: goldenrod;
+        position: relative;
+        h1{
+            margin: 0px;
+        }
+    }
+#left-side{
+#personal-info{
+              top: 60px;
+              border: 1px solid goldenrod;
+              border-radius: 20%;
+              
+            
+    #img{
+        img{
+            width: 100%;
+            padding: 20px;
+            border-radius: 50%;
+            
+        }
+    }
+    #p-desc{
+        text-align: center;
+    }
+}
+#skile{
+    margin: 12px 0px;
+    padding: 12px;
+    h6{
+        font-weight: bold;
+    } 
+    small{
+        font-weight: bold;
+        padding: auto 3px;
+    } 
+ }
+ #intrest{
+    margin: 12px 0px;
+    padding: 12px; 
+    ul{
+        list-style: none;
+    }
+    }
+
+}
+#right-side{
+    margin: 12px 0px;
+}
+}
+
+
+
+// profetional2 cv dessigned
+#pro2{
+    p{
+        font-size: 12px;
+    }
+    h6{
+        font-size: 14px;
+    }
+    margin: 0px !important;
+    border: 2px solid rgb(115, 228, 228);;
+    h5{
+        background:rgb(115, 228, 228);
+        padding: 6px;  
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    #p-info{
+        #name{
+            background: rgb(1, 1, 19);
+            text-align: center;
+            padding: 25px 0px;
+            color:rgb(115, 228, 228);
+            h1,small{
+                margin: 0px;
+            }
+        }
+        #contect-info{
+            background:rgb(115, 228, 228); 
+            table{
+                margin: 0px;
+                tr{
+                    margin: 0px !important;
+                    padding: 4px !important;
+                    th,td{
+                    border: 0px !important;
+
+                    }
+                }
+            }
+        }
+    }
+    #cv-body{
+        padding: 12px;
+        #left-side{
+            padding: 0px;
+            #img{
+                margin:8px 20px;
+                img{
+                    padding:0px;
+                    border-radius: 50%;
+                    margin: 0px auto;
+                }
+            }
+            #profile{
+                margin: 12px 0px;
+                   padding: 12px;
+                p{
+                    margin: 3px 18px;
+
+                }
+            }
+            
+#skile{
+    margin: 12px 0px;
+    padding: 0px;
+    h6{
+        font-weight: bold;
+    } 
+    small{
+        font-weight: bold;
+        padding: auto 3px;
+    } 
+ }
+ #intrest{
+    margin: 12px 0px;
+    padding: 0px; 
+    ul{
+        list-style: none;
+    }
+    }
+    }
+    #right-side{
+        padding: 0px;
+        margin-top: 12px;
+        padding-left: 12px;
+        #education{
+            padding: 12px;
+           margin-bottom: 12px;
+           .edu-desc{
+               margin: 12px 9px;
+            h6{
+                margin-bottom: 2px;
+                font-weight: bold;
+            }
+           }
+        }
+    }
+    
+    } 
+}
+
+//creative 3 dessigned
+#creative3{
+    #l-free{
+        padding: 12px;
+        background: rgba(2, 2, 3, 0.8);
+    }
+    #r-free{
+        padding: 12px;
+        background: lighten(rgba(192, 190, 190, 0.7),10);
+    }
+    #name-img{
+        background: rgb(7, 102, 97);
+        color: white;
+        #name{
+            text-align: center;
+            padding: 10px;
+            border-radius: 3%;
+            h1,small{
+                margin: 0px!important;
+            }
+        }
+        #img{
+            img{
+                border-radius: 50%;
+            }
+        }
+    }
+    #cv-body{ 
+        h5{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        h6{
+            font-size: 12px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 10px;
+            margin-bottom: 0px;
+        }
+        #left-side{
+            .hr{
+                width: 100%;
+                height: 5px;
+                border: 2px solid white !important;
+               background-color: white !important;
+            }
+            background: rgba(2, 2, 3, 0.8);
+            color: white;
+            #contect{
+                padding: 12px 0px;
+                margin: 12px 0px;
+                #cont-desc{
+                    padding-left: 0px;
+                   
+                }
+            }
+           
+            #skile{
+                #skile-desc{
+                    margin: 2px 0px;
+                    padding: 0px;
+                    #skile-head{
+                        padding-left: 0px;
+                        h5{
+                            font-size: 16px;
+                            margin-left: 0px;
+                        }
+                    }
+                  .progress{
+                      margin: 2px 0px;
+                      padding: 0px 0px;
+                      .progress-bar{
+                        background-color: rgb(7, 102, 97);
+                        
+                    }
+                  }
+                }
+               }
+               #award{
+                   margin: 12px 0px;
+               }
+               #certification{
+                   @extend #award;
+               }
+               #intrest{
+                   padding-bottom: 20px;
+                   h5{
+                       margin-bottom: 17px;
+                   }
+                   ul{
+                       list-style: none;
+                       margin: 0px;
+                       li{
+                           font-size: 15px;
+                           margin: 0px;
+                       }
+                   }
+               }
+        }
+        #right-side{
+            background: lighten(rgba(192, 190, 190, 0.7),10); 
+                margin: 0px!important;
+                .hr{
+                    margin: 12px 0px;
+                    width: 100%;
+                    border: 2px solid rgb(0, 0, 0);
+                    background-color: black;
+                    color: white;
+                }
+                p{
+                    font-size: 18;
+                    margin-bottom: 12px;
+                }
+            #profile{
+                padding: 12 0px;
+                margin: 18px 0px;
+            }
+            #education{
+                padding: 12 0px;
+                margin: 18px 0px;
+                #edu-desc{
+                    h5{
+                        margin: 0px;
+                        font-size: 20px;
+                    }
+                    small{
+                        margin: 0%;
+                        padding: 12px 0px;
+                    }
+                }
+            }
+            #experience{
+                padding: 12 0px;
+                margin: 18px 0px;
+            }
+
+            #activity{
+                margin: 18px 0px;
+            }
+        }
+    }
+}
+//profetional 3 cv dessigned 
+#pro3{
+    background-color: rgb(245, 245, 245);
+   #cv-body{
+       h5{
+           background-color:rgba(38, 77, 78, 0.5) ;
+           color: white;
+           text-align: center;
+       }
+    #left-side{
+        #name{
+            text-align: center;
+            margin: 0px;
+            color: rgba(38, 77, 78, 0.5);
+            h4{
+                padding-top: 20px;
+                margin-bottom: 0px;
+                font-weight: bold;
+            }
+            small{
+                margin: 0px;
+            }
+        }
+        #img{
+            padding: 40px;
+            margin: 0px;
+            img{
+                margin: 0px;
+                padding: 20px;
+                border-radius: 50%;
+            }
+        }
+            #contect{
+                padding: 5px 12px;
+               #cont-desc{
+                p{
+                    margin: 0px;
+                    font-size: 12px;
+                }
+               }
+            }
+            #objective{
+                padding: 5px 12px;
+            }
+            #skile{
+                padding: 12px;
+                #skile-desc{
+                    margin-bottom: 12px;
+                    h6{
+                        font-weight: bold;
+                    }
+                }
+            }
+            #intrest{
+                padding: 5px 12px;
+                ul{
+                    list-style: none;
+                    li{
+                        margin: 0px;
+                        padding: 0px;
+                    }
+                }
+            }
+
+        }
+
+    
+
+
+    #right-side{
+       p{
+           font-size: 14px;
+       }
+       h6{
+           font-weight: bold;
+       }
+      small,h6,p{
+           margin: 0px;
+           padding: 0px 19px;
+       }
+       #education{
+           margin: 12px 0px;
+       }
+    }
+
+
+   }
+
+}
+
+//profetional 4 cv dessigned 
+#pro4{
+    background-color: rgb(255, 255, 255);
+   #cv-body{
+       h5{ 
+           font-size: 22px;
+           font-weight: bold;
+       }
+    #left-side{
+        background-color: paleturquoise;
+        #name{
+            text-align: center;
+            margin: 0px;
+            h4{
+                padding-top: 20px;
+                margin-bottom: 0px;
+                font-weight: bold;
+            }
+            small{
+                margin: 0px;
+            }
+        }
+        #img{
+            margin: 0px;
+            img{
+                padding: 14px;
+                margin: 0px;;
+                border-radius: 50%;
+            }
+        }
+            #contect{
+                padding: 5px 12px;
+               #cont-desc{
+                p{ font-size: 14px;
+                    margin: 0px;
+                    font-size: 12px;
+                }
+               }
+            }
+            #objective{
+                padding: 5px 12px;
+                p{ font-size: 14px;
+                    margin: 0px;
+                    font-size: 12px;
+                }
+            }
+            #skile{
+                padding: 5px 12px;
+                #skile-desc{
+                    margin-bottom: 12px;
+                    h6{
+                        font-weight: bold;
+                    }
+                }
+            }
+            #intrest{
+                padding: 5px 12px;
+                ul{
+                    list-style: none;
+                    li{
+                        margin: 0px;
+                        padding: 0px;
+                    }
+                }
+            }
+
+        }
+    #right-side{
+        h5{ background-color:paleturquoise;;
+            font-size: 22px;
+            text-align: center;
+            font-weight: bold;
+        }
+       p{
+           font-size: 14px;
+       }
+       h6{
+           font-weight: bold;
+       }
+      small,h6,p{
+           margin: 0px;
+           padding: 0px 19px;
+       }
+       #education{
+           margin: 12px 0px;
+       }
+    }
+
+
+   }
+
+}
+// profetional 5 cv dessigned
+#pro5{
+    p{
+        font-size: 12px;
+    }
+    h6{
+        font-size: 14px;
+    }
+    margin: 0px !important;
+    border: 2px solid rgb(115, 228, 228);;
+    h5{
+        background:rgb(115, 228, 228);
+        padding: 6px;  
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    #p-info{
+        #name{
+            background: rgb(1, 1, 19);
+            text-align: center;
+            padding: 25px 0px;
+            color:rgb(115, 228, 228);
+            h1,small{
+                margin: 0px;
+            }
+        }
+    }
+    #cv-body{
+     
+        #contect-info{
+            background:rgb(115, 228, 228); 
+            table{
+                margin: 0px;
+                tr{
+                    margin: 0px !important;
+                    padding: 4px !important;
+                    th,td{
+                    border: 0px !important;
+
+                    }
+                }
+            }
+        }
+        #left-side{
+            padding: 0px;
+            #img{
+                margin:8px 20px;
+                img{
+                    padding:0px;
+                    border-radius: 50%;
+                    margin: 0px auto;
+                }
+            }
+            #profile{
+                margin: 12px 0px;
+                   padding: 12px;
+                p{
+                    margin: 3px 18px;
+
+                }
+            }
+#skile{
+    margin: 12px 0px;
+    padding: 0px;
+    h6{
+        font-weight: bold;
+    } 
+    small{
+        font-weight: bold;
+        padding: auto 3px;
+    } 
+ }
+ #intrest{
+    margin: 12px 0px;
+    padding: 0px; 
+    ul{
+        list-style: none;
+    }
+    }
+    }
+    #right-side{
+        padding: 0px;
+        margin-top: 12px;
+        padding-left: 12px;
+        #education{
+            padding: 12px;
+           margin-bottom: 12px;
+           .edu-desc{
+               margin: 12px 9px;
+            h6{
+                margin-bottom: 2px;
+                font-weight: bold;
+            }
+           }
+        }
+    }
+    
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+/*waning modal dessigned
+
+.demo{ background-color: #523E62; }
+.modal-box{ font-family: 'Comfortaa', cursive; }
+.modal-box .show-modal{
+    color: #fff;
+    background-color: #f32e18;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 15px 25px 13px;
+    margin: 80px auto 0;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.modal-box .show-modal:hover,
+.modal-box .show-modal:focus{
+    color: #fff;
+    background-color: #f32e18;
+    outline: none;
+    box-shadow: 0 0 0 5px rgba(255,255,255,0.7);
+}
+.modal-backdrop.in{ opacity: 0; }
+.modal-box .modal-dialog{
+    width: 350px;
+    margin: 150px auto 0;
+}
+.modal.fade .modal-dialog{ transform: translateY(-100px); }
+.modal.in .modal-dialog{ transform: translate(0); }
+.modal-box .modal-dialog .modal-content{
+    background: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+}
+.modal-box .modal-dialog .modal-content .modal-body{ padding: 0 !important; }
+.modal-box .modal-dialog .modal-content .modal-body .modal-icon{
+    color: transparent;
+    background: linear-gradient(#e5a606,#f32e18);
+    font-size: 100px;
+    line-height: 100px;
+    margin: -35px 0 20px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.modal-box .modal-dialog .modal-content .modal-body .title{
+    color: #ed2815;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .description{
+    color: #777;
+    font-size: 15px;
+    margin: 0 35px 30px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .btn{
+    color: #fff;
+    background: linear-gradient(to bottom,#f84927,#f22b15);
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+    padding: 16px 10px 14px;
+    border-radius: 0 0 20px 20px;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+.modal-box .modal-dialog .modal-content .modal-body .btn:hover{ text-shadow: 3px 3px 3px rgba(0,0,0,0.6); }
+.modal-box .modal-dialog .modal-content .modal-body .btn:focus{ outline: none; }
+@media only screen and (max-width: 479px){
+    .modal-dialog{ width: 95% !important; }
+}
+//success modal dessigned
+.modal-box{ font-family: 'Quantico', sans-serif; }
+.modal-box .show-modal{
+    background: linear-gradient(#444,#222);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    margin: 80px auto 0;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.modal-box .show-modal:hover,
+.modal-box .show-modal:focus{
+    color: #fff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.modal-backdrop.in{ opacity: 0; }
+.modal-box .modal-dialog{
+    width: 450px;
+    margin: 70px auto 0;
+}
+.modal.fade .modal-dialog{ transform: translateY(-100px); }
+.modal.in .modal-dialog{ transform: translate(0); }
+.modal-box .modal-dialog .modal-content{
+    text-align: center;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);    
+}   
+.modal-box .modal-dialog .modal-content:before{
+    content: "";
+    background: linear-gradient(to right,#5ce943,#3abc21);
+    border-radius: 6px 6px 0 0;
+    width: 100%;
+    height: 20px;
+    display: block;
+    clear: both;
+}
+.modal-box .modal-dialog .modal-content .close{
+    color: #000;
+    background: rgba(255,255,255,0.8);
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 25px;
+    width: 35px;
+    height: 35px;
+    padding-left: 1px;
+    border-radius: 0 5px 5px 0;
+    overflow: hidden;
+    opacity: 1;
+    position: absolute;
+    left: auto;
+    top: 35px;
+    right: -35px;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.modal-box .modal-dialog .modal-content .close:hover{ color: #555; }
+.modal-box .modal-dialog .modal-content .close span{
+    margin: -6px 0 0;
+    display: block;
+}
+.modal-box .modal-dialog .modal-content .modal-body{ padding: 45px 30px 30px !important; }
+.modal-box .modal-dialog .modal-content .modal-body .modal-icon{
+    color: #161616;
+    font-size: 60px;
+    text-shadow: 0 5px #3ec021;
+    line-height: 105px;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border: 5px solid #d9d9d9;
+    border-radius: 50%;
+}
+.modal-box .modal-dialog .modal-content .modal-body .title{
+    color: #000;
+    font-size: 37px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: block;
+    text-transform: capitalize;
+    margin: 0 0 20px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .title::after{
+    content: "";
+    background: linear-gradient(to right,#5ce943,#3abc21);
+    width: 100px;
+    height: 6px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    display: block;
+    clear: both;
+}
+.modal-box .modal-dialog .modal-content .modal-body .description{
+    color: #9A9EA9;
+    font-size: 20px;
+    margin: 0 0 30px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .btn{
+    color: #3ec021;
+    background: linear-gradient(#444,#222);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 40px;
+    margin: 0 auto -57px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.6s;
+}
+.modal-box .modal-dialog .modal-content .modal-body .btn:hover{
+    color:#fff;
+    text-shadow: 0 0 5px #3ec021;
+    box-shadow: 0 0 10px #3ec021;
+}
+.modal-box .modal-dialog .modal-content .modal-body .btn:focus{ outline: none; }
+@media only screen and (max-width: 767px){
+    .modal-dialog{ width: 85% !important; }
+}
+*/
